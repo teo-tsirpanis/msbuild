@@ -34,12 +34,6 @@
     <PackageVersion Include="System.CodeDom" Version="7.0.0" />
     <PackageVersion Update="System.CodeDom" Condition="'$(SystemCodeDomVersion)' != ''" Version="$(SystemCodeDomVersion)" />
 
-    <PackageVersion Include="System.Private.Uri" Version="4.3.2" />
-    <PackageVersion Update="System.Private.Uri" Condition="'$(SystemPrivateUriVersion)' != ''" Version="$(SystemPrivateUriVersion)" />
-
-    <PackageVersion Include="System.Runtime" Version="4.3.1" />
-    <PackageVersion Update="System.Runtime" Condition="'$(SystemRuntimeVersion)' != ''" Version="$(SystemRuntimeVersion)" />
-
     <PackageVersion Include="System.Security.Cryptography.Pkcs" Version="7.0.0" />
     <PackageVersion Update="System.Security.Cryptography.Pkcs" Condition="'$(SystemSecurityCryptographyPkcsVersion)' != ''" Version="$(SystemSecurityCryptographyPkcsVersion)" />
 
