@@ -15,7 +15,7 @@
     <ProjectReference Include="..\UnitTests.Shared\Microsoft.Build.UnitTests.Shared.csproj" />
     <ProjectReference Include="..\Xunit.NetCore.Extensions\Xunit.NetCore.Extensions.csproj" />
   </ItemGroup>
-  
+
   <ItemGroup Label="TestAssests">
     <ProjectReference Include=".\TestAssets\CustomCheck\CustomCheck.csproj" />
     <ProjectReference Include=".\TestAssets\CustomCheck2\CustomCheck2.csproj" />
@@ -26,7 +26,6 @@
   <ItemGroup>
     <PackageReference Include="System.Collections.Immutable" />
     <PackageReference Include="Shouldly" />
-    <PackageReference Include="System.Net.Http" />
   </ItemGroup>
 
   <ItemGroup>
