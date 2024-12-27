@@ -28,6 +28,15 @@
     <PackageVersion Include="Microsoft.Win32.Registry" Version="5.0.0" />
     <PackageVersion Update="Microsoft.Win32.Registry" Condition="'$(MicrosoftWin32RegistryVersion)' != ''" Version="$(MicrosoftWin32RegistryVersion)" />
 
+    <!-- Pin NETStandard.Library to a 2.x version, in order to avoid the multitude of dependencies when referencing a .NET Standard 1.x project.
+
+    When targeting .NET Standard we already get a new version and this pinning results in an error
+    (https://github.com/NuGet/Home/issues/13990#issuecomment-2547543490).
+
+    TODO: Remove this pin once we use NuGet 6.13 for our build, which ships with https://github.com/NuGet/Home/issues/7344. -->
+    <PackageVersion Include="NETStandard.Library" Condition="'$(TargetFrameworkIdentifier)' != '.NETStandard'" Version="2.0.3" />
+    <PackageVersion Update="NETStandard.Library" Condition="'$(NETStandardLibraryVersion)' != ''" Version="$(NETStandardLibraryVersion)" />
+
     <PackageVersion Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageVersion Update="Newtonsoft.Json" Condition="'$(NewtonsoftJsonVersion)' != ''" Version="$(NewtonsoftJsonVersion)" />
 
